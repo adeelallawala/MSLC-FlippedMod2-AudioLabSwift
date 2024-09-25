@@ -37,6 +37,9 @@ class ViewController: UIViewController {
             // note that we need to normalize the scale of this graph
             // because the fft is returned in dB which has very large negative values and some large positive values
             
+            graph.addGraph(withName: "20pts",
+                           shouldNormalizeForFFT: true,
+                           numPointsInGraph: 20)
             
             graph.addGraph(withName: "fft",
                             shouldNormalizeForFFT: true,
@@ -45,21 +48,26 @@ class ViewController: UIViewController {
             graph.addGraph(withName: "time",
                 numPointsInGraph: AudioConstants.AUDIO_BUFFER_SIZE)
             
-            
-            
             graph.makeGrids() // add grids to graph
         }
         
         // start up the audio model here, querying microphone
-        audio.startMicrophoneProcessing(withFps: 20) // preferred number of FFT calculations per second
+        audio.startProcessingAudioFileForPlayback() 
 
         audio.play()
+        print ("audio model playing")
         
         // run the loop for updating the graph peridocially
         Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true) { _ in
             self.updateGraph()
         }
        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        audio.pause()
+        print ("audio model paused")
     }
     
     // periodically, update the graph with refreshed FFT Data
@@ -76,11 +84,18 @@ class ViewController: UIViewController {
                 forKey: "time"
             )
             
+            graph.updateGraph(
+                data: self.audio.fftData20pt,
+                forKey: "20pts"
+            )
+            
             
             
         }
         
     }
+    
+
     
     
 
