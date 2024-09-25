@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		071E86442CA491E3006CCDAE /* Answers.txt in Resources */ = {isa = PBXBuildFile; fileRef = 071E86432CA491DB006CCDAE /* Answers.txt */; };
 		B60B89FC2ACC96B30083315D /* AudioFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = B60B89F32ACC96B30083315D /* AudioFileReader.m */; };
 		B60B89FD2ACC96B30083315D /* MetalGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B89F52ACC96B30083315D /* MetalGraph.swift */; };
 		B60B89FF2ACC96B30083315D /* Novocaine.m in Sources */ = {isa = PBXBuildFile; fileRef = B60B89F92ACC96B30083315D /* Novocaine.m */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		071E86432CA491DB006CCDAE /* Answers.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Answers.txt; sourceTree = "<group>"; };
 		B60B89F22ACC96B30083315D /* CircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircularBuffer.h; sourceTree = "<group>"; };
 		B60B89F32ACC96B30083315D /* AudioFileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioFileReader.m; sourceTree = "<group>"; };
 		B60B89F42ACC96B30083315D /* FFTHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFTHelper.h; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				B65B5A5924F4409F00E74E73 /* AppDelegate.swift */,
 				B65B5A5B24F4409F00E74E73 /* SceneDelegate.swift */,
 				B65B5A5D24F4409F00E74E73 /* ViewController.swift */,
+				071E86432CA491DB006CCDAE /* Answers.txt */,
 				B65B5A7924F4523C00E74E73 /* AudioModel.swift */,
 				B65B5A5F24F4409F00E74E73 /* Main.storyboard */,
 				B65B5A6224F440A100E74E73 /* Assets.xcassets */,
@@ -168,6 +171,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				071E86442CA491E3006CCDAE /* Answers.txt in Resources */,
 				B65B5A6624F440A100E74E73 /* LaunchScreen.storyboard in Resources */,
 				B65B5A6324F440A100E74E73 /* Assets.xcassets in Resources */,
 				B65B5A7524F4440300E74E73 /* satisfaction.mp3 in Resources */,
