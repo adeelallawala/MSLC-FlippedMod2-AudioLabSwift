@@ -54,7 +54,6 @@ class ViewController: UIViewController {
         // start up the audio model here, querying microphone
         audio.startProcessingAudioFileForPlayback() 
 
-        audio.play()
         print ("audio model playing")
         
         // run the loop for updating the graph peridocially
